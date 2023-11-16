@@ -20,7 +20,7 @@ const CONTACTS_KEY = 'saved-contacts';
 const getStorageContacts = () => {
   const savedContacts = localStorage.getItem(CONTACTS_KEY);
 
-  return savedContacts === '' ? JSON.parse(savedContacts) : initialContacts;
+  return savedContacts === '' ? initialContacts : JSON.parse(savedContacts);
 };
 
 export const App = () => {
